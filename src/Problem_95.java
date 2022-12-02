@@ -12,7 +12,7 @@ public class Problem_95 {
         b.dubble(2, 17);
 
         System.out.println("Computing all points on E over Z7:\n");
-        Point generator = new Point(2, 1);
+        Point generator = new Point(2, 4);
         System.out.println(generator);
 
         generator.computePoints(3, 7);
@@ -22,6 +22,15 @@ public class Problem_95 {
         System.out.println(generator2);
 
         generator2.computePoints(3, 7);
+
+        System.out.println("DHKE based on elliptic curves");
+        System.out.println("Compute aB = 6 * (5, 9) = 2 * (2B + B)\n");
+        Point B = new Point(5, 9);
+        Point twoB = B.dubble(1, 11);
+        Point twoBplusB = twoB.add(B, 11);
+        Point result = twoBplusB.dubble(1, 11);
+        System.out.println("aB = " + result);
+        System.out.println("The shared key is: " + result.x);
 
     }
 
