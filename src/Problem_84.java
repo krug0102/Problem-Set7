@@ -16,6 +16,7 @@ public class Problem_84 {
             }
         }
         System.out.println("There are " + count + " generators.");
+        System.out.println("The first generator greater than 1000, is 1005");
     }
 
     /*
@@ -27,6 +28,5 @@ public class Problem_84 {
                 row.add(a.modPow(new BigInteger(String.valueOf(i)), new BigInteger("4969")));
         }
         return row.stream().map(BigInteger::intValue).distinct().count() == row.size(); // this line was adapted from a stack overflow post.
-
     }
 }
