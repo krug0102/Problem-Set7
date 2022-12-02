@@ -15,7 +15,7 @@ public class Problem_84 {
                 count++;
             }
         }
-        System.out.println("There are " + count + "generators.");
+        System.out.println("There are " + count + " generators.");
     }
 
     /*
