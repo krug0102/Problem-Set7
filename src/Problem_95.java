@@ -75,7 +75,7 @@ public class Problem_95 {
             Point curr = g2.add(this,p);
 
             while(true) {
-                if (curr.x.equals(this.x) & curr.y.equals(new BigInteger(String.valueOf(p - 1)))) {
+                if (curr.x.equals(this.x)) {
                     break;
                 }
                 curr = curr.add(this, p);
